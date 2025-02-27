@@ -12,7 +12,7 @@ const LazyAboutPage = lazy(() => import('./pages/About'))
 const appRoutes = [
   { path: '/', Component: HomePage },
   { path: '/about', Component: AboutPage },
-  { path: '/search', Component: SearchPage }
+  { path: '/search/:query', Component: SearchPage }
 ]
 
 function App () {

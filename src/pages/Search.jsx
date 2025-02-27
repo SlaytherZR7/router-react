@@ -1,8 +1,14 @@
-export default function SearchPage () {
+import { useEffect } from 'react'
+
+export default function SearchPage ({ routeParams }) {
+  useEffect(() => {
+    document.title = `Has buscado ${routeParams.query}`
+  }, [])
+
   return (
     <>
-      <h1>Search</h1>
-      <p>This is the search page.</p>
+      <h1>Search Page</h1>
+      <p>Has buscado <strong>{routeParams.query}</strong></p>
     </>
   )
 }
