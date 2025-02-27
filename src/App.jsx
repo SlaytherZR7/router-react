@@ -1,9 +1,16 @@
+import { HomePage } from './pages/Home'
+import { AboutPage } from './pages/About'
+import { SearchPage } from './pages/Search'
+import { NotFoundPage } from './pages/404'
+
 const App = () => {
   return (
-    <div className='content'>
-      <h1>Rsbuild with React</h1>
-      <p>Start building amazing things with Rsbuild.</p>
-    </div>
+    <main>
+      <HomePage />
+      <AboutPage />
+      <SearchPage />
+      <NotFoundPage />
+    </main>
   )
 }
 
