@@ -1,7 +1,7 @@
-import { HomePage } from './pages/Home'
-import { AboutPage } from './pages/About'
-import { SearchPage } from './pages/Search'
-import { NotFoundPage } from './pages/404'
+import HomePage from './pages/Home'
+import AboutPage from './pages/About'
+import SearchPage from './pages/Search'
+import NotFoundPage from './pages/404'
 
 const App = () => {
   return (
