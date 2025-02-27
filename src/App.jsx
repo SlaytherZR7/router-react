@@ -3,6 +3,7 @@ import HomePage from './pages/Home'
 import AboutPage from './pages/About'
 import SearchPage from './pages/Search'
 import NotFoundPage from './pages/404'
+import { Route } from './components/Route'
 
 const appRoutes = [
   { path: '/', Component: HomePage },
@@ -13,7 +14,10 @@ const appRoutes = [
 function App () {
   return (
     <main>
-      <Router routes={appRoutes} defaultComponent={NotFoundPage} />
+      <Router routes={appRoutes} defaultComponent={NotFoundPage}>
+        <Route path='/' Component={HomePage} />
+        <Route path='/about' Component={AboutPage} />
+      </Router>
     </main>
   )
 }
