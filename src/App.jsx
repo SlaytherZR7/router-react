@@ -1,15 +1,19 @@
+import { Router } from './components/Router'
 import HomePage from './pages/Home'
 import AboutPage from './pages/About'
 import SearchPage from './pages/Search'
 import NotFoundPage from './pages/404'
 
-const App = () => {
+const appRoutes = [
+  { path: '/', Component: HomePage },
+  { path: '/about', Component: AboutPage },
+  { path: '/search', Component: SearchPage }
+]
+
+function App () {
   return (
     <main>
-      <HomePage />
-      <AboutPage />
-      <SearchPage />
-      <NotFoundPage />
+      <Router routes={appRoutes} defaultComponent={NotFoundPage} />
     </main>
   )
 }
