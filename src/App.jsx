@@ -1,7 +1,6 @@
 import { lazy, Suspense } from 'react'
 import { Router } from './components/Router'
 import { Route } from './components/Route'
-import HomePage from './pages/Home'
 import AboutPage from './pages/About'
 import SearchPage from './pages/Search'
 import NotFoundPage from './pages/404'
@@ -10,8 +9,7 @@ const LazyHomePage = lazy(() => import('./pages/Home'))
 const LazyAboutPage = lazy(() => import('./pages/About'))
 
 const appRoutes = [
-  { path: '/', Component: HomePage },
-  { path: '/about', Component: AboutPage },
+  { path: '/:lang/about', Component: AboutPage },
   { path: '/search/:query', Component: SearchPage }
 ]
 
